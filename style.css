@@ -1,19 +1,67 @@
 /* 
-Theme Name: BaseOpinions 
+Theme Name: Base
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Description: Theme for Pixelize Themes
-Author: Kevin Dees and Nick Toye
+Description: Bootstrap Theme
+Author: Kevin Dees
 Theme URI: http://robojuice.com
 Author URI: http://robojuice.com
 */
 
-.wp-caption {}
-.wp-caption-text {}
 .sticky {}
-.gallery-caption {}
 .bypostauthor {}
-.alignright {}
-.alignleft {}
-.aligncenter {}
+
+/* Images */
+.alignleft { float: left; }
+.alignright { float: right; }
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  max-width: 100%;
+  padding: 4px;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+  font-style: italic;
+}
+
+img.wp-smiley,
+.rsswidget img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+.entry-content dl.gallery-item {
+  margin: 0;
+}
+.gallery-item a,
+.gallery-caption {
+  width: 90%;
+}
+.gallery-item a {
+  display: block;
+}
+.gallery-caption a {
+  display: inline;
+}
+.gallery-columns-1 .gallery-item a {
+  max-width: 100%;
+  width: auto;
+}
+.gallery .gallery-icon img {
+  height: auto;
+  max-width: 90%;
+  padding: 5%;
+}
+.gallery-columns-1 .gallery-icon img {
+  padding: 3%;
+}

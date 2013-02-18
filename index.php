@@ -1,20 +1,19 @@
 <!doctype html>
 <!--[if lt IE 8]> <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
-  <meta name="description" content="">
+  <title><?php wp_title( '|', true, 'right' ); ?></title>
 
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
   <?php wp_head(); ?>
 
 </head>
-<body <?php body_class( $class ); ?>>
+<body <?php body_class(); ?>>
   <header>
 
   </header>
@@ -27,6 +26,7 @@
         <?php the_content(); ?>
         <div class="tags"><?php the_tags(); ?></div>
         <?php wp_link_pages(); ?>
+	      <?php comments_template( '', true ); ?>
       </div>
     <?php endwhile; ?>
     <?php posts_nav_link(); ?>

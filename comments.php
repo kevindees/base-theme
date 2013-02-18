@@ -1,3 +1,5 @@
-<?php wp_list_comments(); ?>
-<?php paginate_comments_links(); ?>
-<?php comment_form(); ?>
+<?php
+
+wp_list_comments();
+paginate_comments_links();
+comment_form();
