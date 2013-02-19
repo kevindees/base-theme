@@ -1,23 +1,6 @@
-<!doctype html>
-<!--[if lt IE 8]> <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
-<head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><?php wp_title( '|', true, 'right' ); ?></title>
+<?php get_header(); ?>
 
-  <meta name="viewport" content="width=device-width">
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-  <?php wp_head(); ?>
-
-</head>
-<body <?php body_class(); ?>>
-  <header>
-
-  </header>
-  <div role="main">
+  <section role="main">
 
     <section class="main-content">
     <?php while(have_posts()) : the_post() ?>
@@ -32,16 +15,10 @@
     <?php posts_nav_link(); ?>
     </section>
 
-    <section class="right-content">
-      <?php dynamic_sidebar( 'footer-sidebar' ); ?>
-    </section>
+    <aside class="sidebar-content">
+      <?php if(is_active_sidebar('main-sidebar')) dynamic_sidebar( 'main-sidebar' ); ?>
+    </aside>
 
-  </div>
-  <footer>
-    <?php dynamic_sidebar( 'footer-sidebar' ); ?>
-  </footer>
+  </section>
 
-  <?php wp_footer(); ?>
-
-</body>
-</html>
+<?php get_footer(); ?>
