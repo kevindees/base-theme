@@ -14,4 +14,4 @@
 
 </head>
 <body <?php body_class(); ?>>
-<?php get_template_part( 'chromeframe', 'index' ); ?>
+<?php get_template_part( 'chromeframe' ); ?>

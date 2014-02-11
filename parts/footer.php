@@ -1,5 +1,5 @@
 <footer>
-	<?php if(is_active_sidebar('footer-sidebar')) dynamic_sidebar( 'footer-sidebar' ); ?>
+  <?php get_template_part('parts/sidebars/footer'); ?>
 
 	<?php wp_nav_menu( array( 'theme_location' => 'footer')); ?>
 </footer>

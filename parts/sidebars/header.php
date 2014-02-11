@@ -1,0 +1,1 @@
+<?php if(is_active_sidebar('header-sidebar')) dynamic_sidebar( 'header-sidebar' );

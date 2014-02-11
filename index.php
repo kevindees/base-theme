@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part('parts/sidebars/header'); ?>
 
   <section role="main">
 
@@ -16,9 +16,9 @@
     </section>
 
     <aside class="sidebar-content">
-      <?php if(is_active_sidebar('main-sidebar')) dynamic_sidebar( 'main-sidebar' ); ?>
+      <?php get_template_part('parts/sidebars/main'); ?>
     </aside>
 
   </section>
 
-<?php get_footer(); ?>
+<?php get_template_part('parts/sidebars/footer'); ?>
