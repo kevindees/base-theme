@@ -1,4 +1,7 @@
-<?php get_template_part('parts/sidebars/header'); ?>
+<?php
+  get_template_part('parts/header');
+  get_template_part('parts/sidebars/header');
+?>
 
   <section role="main">
 
