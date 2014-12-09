@@ -1,4 +1,4 @@
-<?php get_template_part('parts/sidebars/header'); ?>
+<?php get_template_part('parts/header'); ?>
 
   <section role="main">
 
@@ -21,4 +21,4 @@
 
   </section>
 
-<?php get_template_part('parts/sidebars/footer'); ?>
+<?php get_template_part('parts/footer'); ?>
