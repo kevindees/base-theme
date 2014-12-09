@@ -1,8 +1,0 @@
-{
-    "require": {
-        "robojuice/acpt": "dev-master"
-    },
-    "autoload": {
-        "files": ["vendor/robojuice/acpt/init.php"]
-    }
-}
