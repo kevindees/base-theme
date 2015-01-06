@@ -4,24 +4,6 @@
 // set content width for no reason at all (not even joking right now)
 if ( ! isset( $content_width ) ) $content_width = 900;
 
-function base_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() )
-		return $title;
-
-	$title .= get_bloginfo( 'name' );
-
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title = "$title $sep $site_description";
-
-	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf('Page %s', max( $paged, $page ) );
-
-	return $title;
-}
-
 function base_head_cleanup() {
   // category feeds
   // remove_action( 'wp_head', 'feed_links_extra', 3 );
@@ -83,13 +65,12 @@ function base_boot() {
   // theme support
   add_theme_support( 'automatic-feed-links' );
   add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'title-tag' );
 
   //Allow editor style.
   add_editor_style();
   // launching operation cleanup
   add_action( 'init', 'base_head_cleanup' );
-  // A better title
-  add_filter( 'wp_title', 'base_wp_title', 10, 2 );
   // remove WP version from RSS
   add_filter( 'the_generator', 'base_rss_version' );
   // remove pesky injected css for recent comments widget

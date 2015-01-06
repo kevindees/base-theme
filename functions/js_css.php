@@ -17,6 +17,7 @@ function add_scripts_styles() {
 		wp_enqueue_script( 'main-script' );
 
 		// CSS
+		wp_enqueue_style( 'comments-style', THEME_DIR . '/css/comments.css' );
 		wp_enqueue_style( 'main-style', THEME_DIR . '/style.css' );
 		wp_enqueue_style( 'custom-style', THEME_DIR . '/css/style.css' );
 
