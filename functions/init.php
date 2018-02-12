@@ -22,9 +22,9 @@ function base_head_cleanup() {
   // WP version
   remove_action( 'wp_head', 'wp_generator' );
   // remove WP version from css
-  add_filter( 'style_loader_src', 'base_remove_wp_ver_css_js', 9999 );
-  // remove Wp version from scripts
-  add_filter( 'script_loader_src', 'base_remove_wp_ver_css_js', 9999 );
+  // add_filter( 'style_loader_src', 'base_remove_wp_ver_css_js', 9999 );
+  // remove WP version from scripts
+  // add_filter( 'script_loader_src', 'base_remove_wp_ver_css_js', 9999 );
 } /* end bones head cleanup */
 
 // remove WP version from RSS
